@@ -7,6 +7,7 @@ import { useStore } from './store';
 import starlitLogoUrl from './assets/starlitLogo.svg'
 import DatePhase from './phases/DatePhase';
 import TimePhase from './phases/TimePhase';
+import qrUrl from './assets/qr.svg'
 
 const Pages: Partial<Record<Phase, any>> = {
 	POD: PodPhase,
@@ -47,6 +48,7 @@ function App() {
 						background: 'linear-gradient(to left, black 0%, transparent 30%)',
 						maskImage: 'linear-gradient(to left, black, transparent)'
 					}} />
+					<img src={qrUrl} className='w-[80px] h-[80px] m-4 self-end opacity-70' />
 
 
 					<div className='mt-auto ml-auto p-4 flex flex-col items-end gap-10'>
