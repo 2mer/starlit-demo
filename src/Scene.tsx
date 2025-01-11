@@ -168,6 +168,9 @@ function Scene() {
 
 
 			(pickSphereRef.current!.material as any).uniforms.color.value.copy(newColor);
+
+			pickSphereRef.current!.scale.setScalar((PAYLOADS as any)[pod].scale);
+			interactionSphereRef.current!.scale.setScalar((PAYLOADS as any)[pod].scale);
 		}
 	}, [pod])
 
