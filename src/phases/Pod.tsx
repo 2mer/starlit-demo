@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { PAYLOADS } from "@/data";
 import { useStore } from "@/store";
-import { ArrowRight, MoonStar, Sparkle, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function PodPhase() {
 	const { pod, setPod, nextPhase } = useStore();

@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { PAYLOADS } from "@/data";
 import { useStore } from "@/store";
-import { ArrowLeft, ArrowRight, MoonStar, Sparkle, Sparkles, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, X } from "lucide-react";
 
 function LocationPhase() {
 	const { location, setLocation, nextPhase, prevPhase } = useStore();

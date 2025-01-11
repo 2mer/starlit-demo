@@ -1,4 +1,4 @@
-import React, { ElementRef, useEffect, useMemo, useRef, useState } from "react";
+import React, { ElementRef, useEffect, useMemo, useRef } from "react";
 import { AdditiveBlending, Color, Raycaster, TextureLoader, Vector2, Vector3 } from "three";
 import earthMapUrl from "./assets/earthmap1k.jpg";
 import earthSpecMapUrl from "./assets/earthspec1k.jpg";
@@ -164,10 +164,10 @@ function Scene() {
 
 	useEffect(() => {
 		if (pod) {
-			const newColor = new Color(PAYLOADS[pod].color);
+			const newColor = new Color((PAYLOADS as any)[pod].color);
 
 
-			pickSphereRef.current!.material.uniforms.color.value.copy(newColor);
+			(pickSphereRef.current!.material as any).uniforms.color.value.copy(newColor);
 		}
 	}, [pod])
 
@@ -191,10 +191,10 @@ function Scene() {
 					onPointerDown={() => {
 						isClickRef.current = true;
 					}}
-					onPointerMove={(e) => {
+					onPointerMove={(_) => {
 						isClickRef.current = false;
 					}}
-					onClick={(e) => {
+					onClick={(_) => {
 						if (isClickRef.current) {
 							setLocation(new Vector3().copy(targetPos))
 						}

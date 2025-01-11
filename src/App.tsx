@@ -7,7 +7,6 @@ import { useStore } from './store';
 import starlitLogoUrl from './assets/starlitLogo.svg'
 import DatePhase from './phases/DatePhase';
 import TimePhase from './phases/TimePhase';
-import { Github } from 'lucide-react';
 
 const Pages: Partial<Record<Phase, any>> = {
 	POD: PodPhase,
